@@ -1,0 +1,46 @@
+{
+  "plugins": ["prettier", "@typescript-eslint", "eslint-plugin-tsdoc", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "tsdoc/syntax": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"]
+      },
+      "rules": {
+        "react/prop-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "curly": "error",
+        "react/jsx-one-expression-per-line": 0,
+        "import/extensions": ["error", "never", { "json": "ignorePackages" }],
+        "no-plusplus": "off",
+        "no-bitwise": "off",
+        "no-continue": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "no-irregular-whitespace": "off",
+        "no-underscore-dangle": "off",
+        "arrow-body-style": "off",
+        "no-restricted-syntax": [
+          "error",
+          { "selector": "TSEnumDeclaration", "message": "Don't declare enums" }
+        ],
+        "@typescript-eslint/no-extraneous-class": "error",
+        "@typescript-eslint/no-misused-promises": [
+          "error",
+          {
+            "checksVoidReturn": false
+          }
+        ]
+      }
+    }
+  ]
+}

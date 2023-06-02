@@ -1,0 +1,1 @@
+export { changeLanguage } from '@util';

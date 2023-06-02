@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": "./",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "composite": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@const": ["./src/const"],
+      "@const/*": ["./src/const/*"],
+      "@definition": ["./src/definition"],
+      "@definition/*": ["./src/definition/*"],
+      "@type": ["./src/type"],
+      "@type/*": ["./src/type/*"],
+      "@util": ["./src/util"],
+      "@util/*": ["./src/util/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
